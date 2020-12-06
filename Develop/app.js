@@ -14,7 +14,8 @@ const render = require("./lib/htmlRenderer");
 const render = require("./lib/htmlRenderer");
 // array to hold all added employees
 let allEmployees = [];
-// questions to populate employee data
+
+// prompt/input/questions to populate employee data
 const start = () => {
     inquirer.prompt([
         {
@@ -84,7 +85,7 @@ const start = () => {
                 let newIntern = new Intern(data.name, data.id, data.email, internData.school);
                 // push new intern to the employee array
                 allEmployees.push(newIntern);
-                // ask if the user would like to add another employee
+                // ask if user would like to add another employee
                 nextEmployee();
             })
         }
